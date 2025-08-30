@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Domain Checker</string>
+    <string name="search_hint">Domain adı girin</string>
+    <string name="clear">Temizle</string>
+    <string name="loading">Yükleniyor...</string>
+    <string name="no_results">Sonuç bulunamadı</string>
+    <string name="no_results_desc">Farklı bir domain deneyin</string>
+    <string name="whois_title">Whois: %s</string>
+    <string name="copy">Kopyala</string>
+    <string name="close">Kapat</string>
+    <string name="whois_copied">Whois bilgisi kopyalandı</string>
+    <string name="click_for_whois">Whois bilgisi için tıklayın</string>
+    <string name="addons">Ek Hizmetler:</string>
+</resources>

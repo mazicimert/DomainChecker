@@ -1,0 +1,6 @@
+<!-- bg_status_badge.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="12dp" />
+    <solid android:color="@color/status_available" />
+</shape>

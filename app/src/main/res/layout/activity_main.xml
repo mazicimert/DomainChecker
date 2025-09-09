@@ -1,24 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
-        app:elevation="0dp">
+        app:elevation="4dp">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:titleTextColor="?attr/colorOnPrimary" />
+            android:background="@drawable/toolbar_gradient"
+            app:titleTextColor="@color/on_primary">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_isimkayit_logo"
+                    android:contentDescription="İsimKayıt Logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Domain Checker"
+                    android:textColor="@color/on_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -38,35 +65,73 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="4dp"
-                app:strokeColor="?attr/colorOutline"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="@color/card_background"
+                app:strokeColor="@color/outline_variant"
                 app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="24dp">
+
+                    <!-- Header with Logo -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="20dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_search_24"
+                            app:tint="@color/primary" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Domain Arama"
+                            android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_isimkayit_logo"
+                            android:contentDescription="İsimKayıt"
+                            android:alpha="0.7" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
-                        android:text="Domain Ara"
-                        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
-                        android:textColor="?attr/colorOnSurface" />
+                        android:layout_marginBottom="16dp"
+                        android:text="İstediğiniz domain adını arayın ve müsaitlik durumunu kontrol edin"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                        android:textColor="@color/text_secondary" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Domain adı girin"
+                        android:hint="örn: example.com"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                         app:endIconMode="clear_text"
-                        app:startIconDrawable="@drawable/ic_search_24"
-                        app:boxCornerRadiusBottomEnd="12dp"
-                        app:boxCornerRadiusBottomStart="12dp"
-                        app:boxCornerRadiusTopEnd="12dp"
-                        app:boxCornerRadiusTopStart="12dp">
+                        app:startIconDrawable="@drawable/ic_domain_24"
+                        app:startIconTint="@color/primary"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxStrokeColor="@color/primary"
+                        app:hintTextColor="@color/text_secondary">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_search_domain"
@@ -75,20 +140,54 @@
                             android:inputType="textNoSuggestions"
                             android:maxLines="1"
                             android:singleLine="true"
-                            android:digits="abcdefghijklmnopqrstuvwxyz."/>
+                            android:digits="abcdefghijklmnopqrstuvwxyz.0123456789-"
+                            android:textColor="@color/text_primary"
+                            android:imeOptions="actionSearch" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btn_clear"
-                        style="@style/Widget.Material3.Button.TextButton"
-                        android:layout_width="wrap_content"
+                    <!-- Button Container -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="8dp"
-                        android:text="Temizle"
-                        android:visibility="gone"
-                        app:icon="@drawable/ic_clear_24" />
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_search"
+                            style="@style/Widget.Material3.Button"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:text="Sorgula"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:backgroundTint="@color/primary"
+                            android:textColor="@color/on_primary"
+                            android:enabled="false"
+                            app:icon="@drawable/ic_search_24"
+                            app:iconTint="@color/on_primary"
+                            app:cornerRadius="16dp"
+                            app:rippleColor="@color/ripple_primary" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_clear"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="56dp"
+                            android:layout_marginStart="8dp"
+                            android:text="Temizle"
+                            android:textColor="@color/primary"
+                            android:visibility="gone"
+                            app:icon="@drawable/ic_clear_24"
+                            app:iconTint="@color/primary"
+                            app:strokeColor="@color/primary"
+                            app:cornerRadius="16dp"
+                            app:rippleColor="@color/ripple_primary" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -102,18 +201,20 @@
 
                 <!-- Loading Indicator -->
                 <LinearLayout
+                    android:id="@+id/progress_bar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:orientation="vertical"
-                    android:visibility="gone"
-                    android:id="@+id/progress_bar">
+                    android:visibility="gone">
 
                     <com.google.android.material.progressindicator.CircularProgressIndicator
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:indeterminate="true" />
+                        android:indeterminate="true"
+                        app:indicatorColor="@color/primary"
+                        app:trackColor="@color/outline_variant" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -121,7 +222,7 @@
                         android:layout_marginTop="16dp"
                         android:text="Domain aranıyor..."
                         android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-                        android:textColor="?attr/colorOnSurfaceVariant" />
+                        android:textColor="@color/text_secondary" />
 
                 </LinearLayout>
 
@@ -139,19 +240,20 @@
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="24dp"
                         android:alpha="0.6"
                         android:src="@drawable/ic_domain_disabled_24"
-                        app:tint="?attr/colorOnSurfaceVariant" />
+                        app:tint="@color/text_tertiary" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="12dp"
                         android:text="Sonuç bulunamadı"
                         android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
-                        android:textColor="?attr/colorOnSurfaceVariant" />
+                        android:textColor="@color/text_secondary"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -160,7 +262,8 @@
                         android:gravity="center"
                         android:text="Aradığınız domain için sonuç bulunamadı.\nFarklı bir domain deneyin."
                         android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-                        android:textColor="?attr/colorOnSurfaceVariant" />
+                        android:textColor="@color/text_tertiary"
+                        android:lineSpacingExtra="2dp" />
 
                 </LinearLayout>
 
@@ -169,9 +272,11 @@
                     android:id="@+id/recycler_view_domains"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/domain_results_list"
                     android:clipToPadding="false"
                     android:paddingHorizontal="16dp"
                     android:paddingBottom="16dp"
+                    android:scrollbarStyle="outsideOverlay"
                     tools:listitem="@layout/item_domain" />
 
             </FrameLayout>
@@ -179,5 +284,111 @@
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
+
+    <!-- Full Page Loading Modal -->
+    <FrameLayout
+        android:id="@+id/loading_modal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/semi_transparent_black"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        android:elevation="10dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="280dp"
+            android:layout_height="320dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="16dp"
+            app:cardBackgroundColor="@color/card_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="32dp"
+                android:background="@drawable/loading_modal_gradient">
+
+                <!-- İsimKayıt Logo -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="24dp"
+                    android:src="@drawable/ic_isimkayit_logo"
+                    android:contentDescription="İsimKayıt Logo"
+                    android:scaleType="fitCenter"
+                    app:tint="@color/on_primary" />
+
+
+                <!-- Loading Animation -->
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="24dp"
+                    android:indeterminate="true"
+                    app:indicatorColor="@color/on_primary"
+                    app:trackColor="@color/semi_transparent_white"
+                    app:indicatorSize="64dp"
+                    app:trackThickness="6dp" />
+
+                <!-- Loading Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Sorgulanıyor..."
+                    android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+                    android:textColor="@color/on_primary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Domain bilgileri kontrol ediliyor"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textColor="@color/semi_transparent_white"
+                    android:gravity="center" />
+
+                <!-- Animated Dots -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <View
+                        android:id="@+id/dot1"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/loading_dot"
+                        android:alpha="0.4" />
+
+                    <View
+                        android:id="@+id/dot2"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/loading_dot"
+                        android:alpha="0.4" />
+
+                    <View
+                        android:id="@+id/dot3"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:background="@drawable/loading_dot"
+                        android:alpha="0.4" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

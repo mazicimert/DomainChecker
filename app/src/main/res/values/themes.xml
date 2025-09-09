@@ -10,5 +10,6 @@
         <item name="colorOnSurface">@color/text_primary</item>
         <item name="colorOnSurfaceVariant">@color/text_secondary</item>
 
+
     </style>
 </resources>

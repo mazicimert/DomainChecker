@@ -2,9 +2,8 @@
     <gradient
         android:angle="135"
         android:startColor="@color/primary"
-        android:endColor="@color/primary_dark"
+        android:centerColor="@color/primary_dark"
+        android:endColor="@color/primary_variant"
         android:type="linear" />
-    <corners
-        android:topLeftRadius="24dp"
-        android:topRightRadius="24dp" />
+    <corners android:radius="24dp" />
 </shape>

@@ -22,8 +22,7 @@ data class ApiMessage(
     @SerializedName("domains")
     val domains: List<Domain>?
 ){
-    // ✨ YENİ EKLENEN KISIM:
-    // Handle case where message is just a string (error case)
+
     override fun toString(): String {
         return when {
             domains != null -> "Found ${domains.size} domains"

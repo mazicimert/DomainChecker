@@ -1,70 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Primary Brand Colors -->
-    <color name="primary">#6750A4</color>
+    <!-- İsimKayıt Brand Colors -->
+    <color name="primary">#2B9BD1</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_variant">#0D47A1</color>
     <color name="on_primary">#FFFFFF</color>
-    <color name="primary_dark">#3700B3</color>
-    <color name="accent">#03DAC5</color>
 
-    <!-- Secondary Colors -->
-    <color name="secondary">#625B71</color>
-    <color name="secondary_container">#E8DEF8</color>
+    <!-- Secondary Brand Colors -->
+    <color name="secondary">#546E7A</color>
+    <color name="secondary_variant">#37474F</color>
     <color name="on_secondary">#FFFFFF</color>
-    <color name="on_secondary_container">#1D192B</color>
 
-    <!-- Surface Colors -->
-    <color name="surface">#FEF7FF</color>
-    <color name="surface_variant">#E7E0EC</color>
-    <color name="on_surface">#1D1B20</color>
-    <color name="on_surface_variant">#49454F</color>
-
-    <!-- Text Colors -->
-    <color name="text_primary">#000000</color>
-    <color name="text_secondary">#757575</color>
+    <!-- Accent Colors -->
+    <color name="accent">#00BCD4</color>
+    <color name="accent_light">#26C6DA</color>
 
     <!-- Background Colors -->
-    <color name="background">#FEF7FF</color>
-    <color name="on_background">#1D1B20</color>
+    <color name="background">#F8FAFB</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F1F5F9</color>
+    <color name="on_background">#1A202C</color>
+    <color name="on_surface">#1A202C</color>
+    <color name="on_surface_variant">#4A5568</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1A202C</color>
+    <color name="text_secondary">#4A5568</color>
+    <color name="text_tertiary">#718096</color>
 
     <!-- Outline Colors -->
-    <color name="outline">#79747E</color>
-    <color name="outline_variant">#CAC4D0</color>
+    <color name="outline">#CBD5E0</color>
+    <color name="outline_variant">#E2E8F0</color>
 
     <!-- Domain Status Colors -->
-    <color name="status_available">#4CAF50</color>
-    <color name="status_available_dark">#388E3C</color>
-    <color name="status_registered">#F44336</color>
-    <color name="status_registered_dark">#D32F2F</color>
-    <color name="status_unknown">#FF9800</color>
-    <color name="status_unknown_dark">#F57C00</color>
+    <color name="status_available">#10B981</color>
+    <color name="status_available_light">#D1FAE5</color>
+    <color name="status_available_dark">#047857</color>
+
+    <color name="status_registered">#EF4444</color>
+    <color name="status_registered_light">#FEE2E2</color>
+    <color name="status_registered_dark">#DC2626</color>
+
+    <color name="status_unknown">#F59E0B</color>
+    <color name="status_unknown_light">#FEF3C7</color>
+    <color name="status_unknown_dark">#D97706</color>
 
     <!-- Chip Colors -->
-    <color name="chip_popular_bg">#E3F2FD</color>
-    <color name="chip_popular_text">#1976D2</color>
-    <color name="chip_other_bg">#F3E5F5</color>
-    <color name="chip_other_text">#7B1FA2</color>
-    <color name="chip_default_bg">#F5F5F5</color>
-    <color name="chip_default_text">#424242</color>
+    <color name="chip_popular_bg">#DBEAFE</color>
+    <color name="chip_popular_text">#1E40AF</color>
+    <color name="chip_hot_bg">#FEE2E2</color>
+    <color name="chip_hot_text">#DC2626</color>
+    <color name="chip_other_bg">#F3F4F6</color>
+    <color name="chip_other_text">#374151</color>
+    <color name="chip_default_bg">#F1F5F9</color>
+    <color name="chip_default_text">#475569</color>
 
     <!-- Additional Semantic Colors -->
-    <color name="success">#4CAF50</color>
-    <color name="error">#F44336</color>
-    <color name="warning">#FF9800</color>
-    <color name="info">#2196F3</color>
-
-    <!-- Gradient Colors -->
-    <color name="gradient_start">#6750A4</color>
-    <color name="gradient_end">#9C27B0</color>
+    <color name="success">#10B981</color>
+    <color name="error">#EF4444</color>
+    <color name="warning">#F59E0B</color>
+    <color name="info">#3B82F6</color>
 
 
+    <!-- Gradient Colors for Premium Look -->
+    <color name="gradient_start">#2B9BD1</color>
+    <color name="gradient_center">#1976D2</color>
+    <color name="gradient_end">#0D47A1</color>
+
+    <!-- Card Colors -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_border">#E5E7EB</color>
+    <color name="card_shadow">#0000001A</color>
+
+    <!-- Interactive Colors -->
+    <color name="ripple_primary">#2B9BD120</color>
+    <color name="ripple_surface">#00000008</color>
 
     <!-- Transparent Colors -->
     <color name="transparent">#00000000</color>
     <color name="semi_transparent_black">#80000000</color>
-    <color name="semi_transparent_white">#80FFFFFF</color>
+    <color name="semi_transparent_white">#B3FFFFFF</color>
+    <color name="semi_transparent_primary">#4D2B9BD1</color>
 
-    <!-- Ripple Colors -->
-    <color name="ripple_light">#1F000000</color>
-    <color name="ripple_dark">#1FFFFFFF</color>
+    <!-- Special Effect Colors -->
+    <color name="shimmer_light">#F0F0F0</color>
+    <color name="shimmer_dark">#E0E0E0</color>
+
+    <!-- Status Bar Colors -->
+    <color name="status_bar">#1976D2</color>
+    <color name="navigation_bar">#FFFFFF</color>
+
 
 </resources>

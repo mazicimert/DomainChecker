@@ -12,4 +12,6 @@
     <string name="whois_copied">Whois bilgisi kopyalandı</string>
     <string name="click_for_whois">Whois bilgisi için tıklayın</string>
     <string name="addons">Ek Hizmetler:</string>
+    <string name="domain_results_list">Domain sonuçları listesi</string>
+
 </resources>

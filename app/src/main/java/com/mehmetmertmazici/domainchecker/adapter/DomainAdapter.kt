@@ -158,8 +158,20 @@ class DomainAdapter(
 
         private fun setupClickability(domain: Domain) {
             binding.apply {
-                val isRegistered = domain.status == "registered"
-                tvClickHint.visibility = if (isRegistered) View.VISIBLE else View.GONE
+                when (domain.status) {
+                    "registered" -> {
+                        tvClickHint.text = "Whois bilgisi için tıklayın"
+                        tvClickHint.visibility = View.VISIBLE
+                    }
+                    "available" -> {
+                        tvClickHint.text = "Kayıt için tıklayın"
+                        tvClickHint.visibility = View.VISIBLE
+                        tvClickHint.setTextColor(ContextCompat.getColor(itemView.context, R.color.status_available_dark))
+                    }
+                    else -> {
+                        tvClickHint.visibility = View.GONE
+                    }
+                }
             }
         }
     }
